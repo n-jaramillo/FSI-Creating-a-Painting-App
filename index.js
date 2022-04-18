@@ -45,5 +45,8 @@ palette.append(button)
 
 let pixels = document.querySelectorAll('.pixel')
 button.addEventListener('click', function(){
-    pixels.style.backgroundColor = 'white'
+    for(let i = 0; i < pixels.length; i++)
+    {
+        pixels[i].style.backgroundColor = 'white'
+    }   
 })
