@@ -16,6 +16,13 @@ let red = document.querySelector('#red')
 let yellow = document.querySelector('#yellow')
 let green = document.querySelector('#green')
 
+let purple = document.createElement('div')
+purple.setAttribute('class', 'color-choice')
+purple.setAttribute('id', 'purple')
+purple.textContent = '■'
+purple.style.color = 'purple'
+palette.append(purple)
+
 blue.addEventListener('click', function(){
         selectedColor = 'blue'
 })
@@ -27,4 +34,16 @@ yellow.addEventListener('click', function(){
 })
 green.addEventListener('click', function(){
     selectedColor = 'green'
+})
+purple.addEventListener('click', function(){
+    selectedColor = 'purple'
+})
+
+let button = document.createElement('button')
+button.textContent = 'Clear'
+palette.append(button)
+
+let pixels = document.querySelectorAll('.pixel')
+button.addEventListener('click', function(){
+    pixels.style.backgroundColor = 'white'
 })
